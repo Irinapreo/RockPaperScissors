@@ -1,13 +1,21 @@
 ﻿namespace RockPaperScissors;
 
+public enum PlayerNames
+{
+    
+}
+
 public class Player
 {
     public string Name;
-    public Profession Profession;
-    public Player(string n, Profession p)
+    public Player(string n)
     {
         Name = n;
-        Profession = p;
+        
+        
     }
-
+    public override string ToString() 
+    {
+        return Name;
+    }  
 }
