@@ -43,7 +43,7 @@ int counter2 = 0;
 
 while (counter1 < 3 || counter2 < 3)
 {
-    Console.WriteLine(players[index] + ", chose r, p or s: ");
+    Console.WriteLine("Player 1, chose r, p or s: ");
     var choice1 = Console.ReadLine();
     Console.WriteLine("Player 2, chose r, p or s: ");
     var choice2 = Console.ReadLine();
@@ -62,8 +62,7 @@ while (counter1 < 3 || counter2 < 3)
             Console.WriteLine("Player 1 has won this round! ");
         }
 
-        counter2++;
-
+        counter1++;
     }
     if (choice1 == "r")
     {
@@ -71,6 +70,56 @@ while (counter1 < 3 || counter2 < 3)
         {
             Console.WriteLine("Player 2 has won this round! ");
         }
+        counter2++;
+    }
+
+    if (choice1 == "p")
+    {
+        if (choice2 == "p")
+        {
+            Console.WriteLine("Draw");
+        }
+    }
+    if (choice1 == "p")
+    {
+        if (choice2 == "r")
+        {
+            Console.WriteLine("Player 1 has won this round! ");
+        }
+        counter1++;
+    }
+    if (choice1 == "p")
+    {
+        if (choice2 == "s")
+        {
+            Console.WriteLine("Player 2 has won this round! ");
+        }
+        counter2++;
+    }
+
+    if (choice1 == "s")
+    {
+        if (choice2 == "s")
+        {
+            Console.WriteLine("Draw");
+        }
+    }
+    if (choice1 == "s")
+    {
+        if (choice2 == "r")
+        {
+            Console.WriteLine("Player 2 has won this round! ");
+        }
+        counter2++;
+    }
+    if (choice1 == "s")
+    {
+        if (choice2 == "s")
+        {
+            Console.WriteLine("Player 1 has won this round! ");
+        }
         counter1++;
     }
 }
+
+Console.WriteLine("Someone won");
